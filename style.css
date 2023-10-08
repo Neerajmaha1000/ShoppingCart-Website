@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{                              /* * is universal selector..applies to all content*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;  /*padding and border are included within that width*/
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1{
+   font-size: 50px;
+   line-height: 64px; /*spacing between the lines*/
+   color: #222; 
+
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700px;     /*Weight means here bolding the text*/
+    font-size: 12px;  
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0px 20px 0px;
+}
+
+.section-p1{    
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0px;
+}
+
+body{
+    width: 100%;
+}
+
+/*header CSS*/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;   /*Navbar will always stick to the home page...IMP for E-Commerce Website*/
+    top: 0;             /*Navbar will always stick to the home page at top and left corner....Also we can use right*/
+    left: 0;
+}
+
+.logo{
+        height: 100px;
+        width:  107px;
+        padding: 13px;
+        margin: -28px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0px 20px;
+     
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(21, 21, 21);
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover, 
+ #navbar li a.active{                    /*Active will highlight the HOME page,homepage have class of active */
+    color: #4d7d69;
+}
+
+
+/*Home Page*/
+
+ #hero{
+    background-image: url("HomePage/bright-positive-fashion-studio-portrait-young-girl-with-nude-lips-bright-make-up-stylish-trendy-outfit-pink-skirt-smart-casual.jpg");
+    height: 90vh;           /*"90vh" means that it will take up 90% of the height of the user's browser window*/
+    width: 100%;
+    background-size: cover;
+    background-position: top 11% right 0;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+ }
+
+ #hero h4{
+    padding-bottom: 15px;
+ }
+
+ #hero h1{
+    color: cadetblue;
+ }
+
+ #hero button{
+    background-image: url("HomePage/mint-green-watercolor-background-ombre-260nw-1657594972.png");
+    background-color: transparent;
+    border: 2px solid cadetblue;
+    border-radius: 31px ;
+    padding: 19px 74px 18px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+
+ }
+
+ #hero button:hover{
+    color: rgb(9, 88, 54);
+    box-shadow:20px 20px 64px rgba(0, 0, 0, 0.08);
+ }
+
+ #feature{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+
+ }
+
+#feature .fe-box{
+    text-align: center;
+    flex-basis: calc(20% - 20px); /* 20% width with 20px spacing */
+    border: 2px solid burlywood;
+    border-radius: 2 %;
+    padding-bottom: 1%;
+    box-shadow:20px 20px 34px rgba(0, 0, 0, 0.06)
+    position: relative; /* Add a relative position */
+                
+}
+
+#feature .fe-box:hover{
+    box-shadow:20px 20px 64px rgba(0, 0, 0, 0.08);
+
+}
+
+#feature .fe-box img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative; /* Add a relative position */
+    z-index: -1; /* Set a lower z-index to place it behind the box */
+
+}
+
+#feature .fe-box h6{
+    border-radius: 40px;
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    color: rgb(38, 146, 110);
+    background-color: rgb(248, 200, 209);
+    line-height: 1;
+}
+
+#feature .fe-box:nth-child(2) h6{
+    background-color: antiquewhite
+}
+
+
+#feature .fe-box:nth-child(3) h6{
+    background-color: rgb(205, 229, 245)
+}
+
+#feature .fe-box:nth-child(4) h6{
+    background-color: rgb(203, 239, 192)
+}
+
+#feature .fe-box:nth-child(5) h6{
+    background-color: rgb(230, 227, 250)
+}
+
+ 
+#product {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    padding: 30px;
+    text-align: center;
+}
+
+#product h2 {
+    width: 100%; /* Make the heading span the full width */
+    text-align: center;
+    font-size: 39px;
+    margin-bottom: 20px; /* Add some space between the headline and products */
+}
+
+#product .dress {
+    flex-basis: calc(25% - 20px); /* 25% width with 20px spacing (four items in a row) */
+    border: 2px solid burlywood;
+    border-radius: 2%;
+    padding-bottom: 1%;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
+    position: relative;
+    margin-bottom: 20px; /* Add some space between the products */
+}
+
+#product .dress img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: -1;
+}
+
+#product .dress h6 {
+    border-radius: 40px;
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    color: rgb(38, 146, 110);
+    background-color: rgb(248, 200, 209);
+    line-height: 1;
+}
+
+#product .dress:nth-child(2) h6 {
+    background-color: antiquewhite;
+}
+
+#product .dress:nth-child(3) h6 {
+    background-color: rgb(205, 229, 245);
+}
+
+#product .dress:nth-child(4) h6 {
+    background-color: rgb(203, 239, 192);
+}
+
+#product .dress:nth-child(5) h6 {
+    background-color: rgb(230, 227, 250);
+}
+
+footer {
+    background-color:#E3E6F3;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer .col {
+    flex: 1;
+    margin: 10px;
+    padding: 10px; /* Added padding to the columns */
+    
+  }
+  
+
+  footer img {
+    width: 100px;
+  }
+  
+  footer h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    padding-bottom: 4%;
+  }
+  
+  footer a {
+    padding: 2%;
+    color: grey;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer .col.install {
+    padding: 10px;
+    border-bottom: 1px solid #fff; /* Add a bottom border to separate it */
+    margin-bottom: 20px; /* Add margin to the bottom to separate it from the next section */
+}
+
+/* Contact Page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:#E3E6F3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+

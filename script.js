@@ -1,0 +1,1 @@
+prompt("Write your name");
